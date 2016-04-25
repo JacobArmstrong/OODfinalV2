@@ -1,0 +1,58 @@
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
+public class ConcreteTestPawn implements Pawn {
+	ImageView iv = new ImageView();
+	
+	boolean shouldBeDeleted = false;
+
+	public ConcreteTestPawn(Image img, int posX, int posY) {
+		iv.setImage(img);
+
+		iv.setX(posX);
+		iv.setY(posY);
+	}
+
+	@Override
+	public int getX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setX(int newY) {
+
+	}
+
+	@Override
+	public void setY(int newX) {
+
+	}
+
+	@Override
+	public ImageView getImageView() {
+		return iv;
+	}
+
+	@Override
+	public void update() {
+			
+	}
+
+	@Override
+	public boolean shouldBeDeleted() {
+		return shouldBeDeleted;
+	}
+
+	@Override
+	public void markForDeletion() {
+		shouldBeDeleted = true;
+	}
+
+}
