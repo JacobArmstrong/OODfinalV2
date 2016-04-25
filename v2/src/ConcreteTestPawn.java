@@ -12,29 +12,7 @@ public class ConcreteTestPawn implements Pawn {
 		iv.setX(posX);
 		iv.setY(posY);
 	}
-
-	@Override
-	public int getX() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getY() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void setX(int newY) {
-
-	}
-
-	@Override
-	public void setY(int newX) {
-
-	}
-
+	
 	@Override
 	public ImageView getImageView() {
 		return iv;

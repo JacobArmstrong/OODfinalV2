@@ -8,26 +8,6 @@ public abstract class PawnDecorator implements Pawn {
 	}
 
 	@Override
-	public int getX() {
-		return decoratedPawn.getX();
-	}
-
-	@Override
-	public int getY() {
-		return decoratedPawn.getY();
-	}
-
-	@Override
-	public void setX(int newX) {
-		decoratedPawn.setX(newX);
-	}
-
-	@Override
-	public void setY(int newY) {
-		decoratedPawn.setY(newY);
-	}
-
-	@Override
 	public ImageView getImageView() {
 		return decoratedPawn.getImageView();
 	}
