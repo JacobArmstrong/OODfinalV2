@@ -7,6 +7,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 //If you want to test something, do it in the test class "Tset.java"
 public class MainClass extends Application {
 	PlayerControl input = new PlayerControl();
+	
 	public static void main(String[] args) {
 		//Launch the application
 		Application.launch(args);

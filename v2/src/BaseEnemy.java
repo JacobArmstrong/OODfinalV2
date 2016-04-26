@@ -1,5 +1,7 @@
+import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 public class BaseEnemy implements Pawn {
 	ImageView iv = new ImageView();
@@ -11,6 +13,15 @@ public class BaseEnemy implements Pawn {
 
 		iv.setX(posX);
 		iv.setY(posY);
+		
+		iv.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+
+		     @Override
+		     public void handle(MouseEvent event) {
+		         markForDeletion();
+		     }
+		});
+
 	}
 	
 	@Override
@@ -20,7 +31,7 @@ public class BaseEnemy implements Pawn {
 
 	@Override
 	public void update() {
-			
+		
 	}
 
 	@Override

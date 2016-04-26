@@ -8,7 +8,6 @@ import javafx.scene.input.KeyEvent;
 
 public class PlayerControl extends Observable  {
 	KeyCode input;
-	
 	void update(KeyEvent e){
 		input=e.getCode();
 		setChanged();
