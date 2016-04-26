@@ -46,9 +46,9 @@ public class MainClass extends Application {
 			}
 		});
 		
-		//Create a list of pawns
+		//Initialize a list of pawns
 		final LinkedList<Pawn> pawnsInScene = new LinkedList<Pawn>();
-		//Create a list of pawns that are marked for deletion
+		//Initialize a list of pawns that are marked for deletion
 		final LinkedList<Pawn> pawnsToDelete = new LinkedList<Pawn>();
 		
 		//Create a spawner
@@ -61,23 +61,28 @@ public class MainClass extends Application {
 		stage.show();
 		
 		
-		
+		//Create an infinite loop
 		AnimationTimer gameLoop = new AnimationTimer() {
 			@Override
 			public void handle(long arg0) {
+				//Call update in each of the pawns in the scene
 				for(Pawn pawn : pawnsInScene){
 					pawn.update();
+					//if a pawn has been marked for deletion, add it to the deletion list
 					if(pawn.shouldBeDeleted())
 						pawnsToDelete.add(pawn);
 				}
 				
+				//Remove every pawn that is marked for deletion from the scene
 				for(Pawn doomedPawn : pawnsToDelete){
 					canvas.getChildren().remove(doomedPawn.getImageView());
 					pawnsInScene.remove(doomedPawn);
 				}
 
+				//Clear the list of pawns to be deleted
 				pawnsToDelete.clear();
 				
+				//Update the spawn factory
 				factory.update();
 			}
 		};
