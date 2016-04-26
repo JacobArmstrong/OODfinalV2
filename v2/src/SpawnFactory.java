@@ -30,8 +30,8 @@ public class SpawnFactory {
 		input.addObserver((MoveLeftOnA)player);
 		player = new MoveRightOnD(player);
 		input.addObserver((MoveRightOnD)player);
-		player = new JumpOnSpace(player, 5);
-		input.addObserver((JumpOnSpace)player);
+		player = new JumpOnW(player, 5);
+		input.addObserver((JumpOnW)player);
 		
 		canvas.getChildren().add(player.getImageView());
 		pawnsInScene.add(player);
