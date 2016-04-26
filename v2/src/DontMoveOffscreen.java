@@ -12,7 +12,7 @@ public class DontMoveOffscreen extends PawnDecorator{
 
 	@Override
 	void doBehavior() {
-		if(iv.getX() < 0 - iv.getImage().getWidth()){
+		if(iv.getX() < 0){
 			iv.setX(0);
 		}
 		else if(iv.getX() > width - iv.getImage().getWidth()){
