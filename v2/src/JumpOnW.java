@@ -11,6 +11,7 @@ class JumpOnW extends PawnDecorator implements Observer {
 	ImageView iv = getImageView();
 	public int height = 900;
 	public int count;
+	
 	public JumpOnW(Pawn decoratedPawn, int speed) {
 		super(decoratedPawn);
 		yVelocity = speed;
@@ -49,19 +50,6 @@ class JumpOnW extends PawnDecorator implements Observer {
 				state=0;
 				//count = 0;
 			}
-			
-			/*if(move == true && iv.getY() >= 120) {
-				iv.setY(iv.getY() - yVelocity);
-			}
-			//Start falling
-			else if(move == true && iv.getY() <= 240) {
-				iv.setY(iv.getY() + yVelocity);
-			} 
-			//Reset Values
-			else {
-				move = false;
-			}*/
-			
 		}
 	}
 }
