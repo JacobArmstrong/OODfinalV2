@@ -29,7 +29,7 @@ class MoveLeftOnA extends PawnDecorator implements Observer {
 		//When move is true, move the image some amount to the right
 		if(move){
 			ImageView iv = getImageView();
-			iv.setX(iv.getX() - 5);
+			iv.setX(iv.getX() - 8);
 			move = false;
 			
 			if(iv.getScaleX()>0)

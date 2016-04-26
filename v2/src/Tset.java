@@ -58,7 +58,7 @@ public class Tset extends Application  {
 
 		stage.show();
 
-		ConcreteTestPawn myTestPawn = new ConcreteTestPawn(img, 800, 450);
+		BaseEnemy myTestPawn = new BaseEnemy(img, 800, 450);
 		canvas.getChildren().add(myTestPawn.getImageView());
 		
 		JumpOnSpace move = new JumpOnSpace(myTestPawn, 5);

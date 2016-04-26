@@ -1,12 +1,12 @@
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class ConcreteTestPawn implements Pawn {
+public class BaseEnemy implements Pawn {
 	ImageView iv = new ImageView();
 	
 	boolean shouldBeDeleted = false;
 
-	public ConcreteTestPawn(Image img, int posX, int posY) {
+	public BaseEnemy(Image img, int posX, int posY) {
 		iv.setImage(img);
 
 		iv.setX(posX);
